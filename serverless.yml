@@ -20,6 +20,22 @@ functions:
           method: get
           cors: true
 
+  register:
+    handler: src/functions/auth/register.handler
+    events:
+      - http:
+          path: /auth/register
+          method: post
+          cors: true
+
+  login:
+    handler: src/functions/auth/login.handler
+    events:
+      - http:
+          path: /auth/login
+          method: post
+          cors: true
+
   getLists:
     handler: src/functions/lists/getLists.handler
     events:
