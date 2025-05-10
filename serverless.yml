@@ -1,0 +1,82 @@
+service: to-do-list-backend
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+plugins:
+  - serverless-offline
+
+functions:
+  health:
+    handler: src/functions/health.handler
+    events:
+      - http:
+          path: /health
+          method: get
+          cors: true
+
+  getLists:
+    handler: src/functions/lists/getLists.handler
+    events:
+      - http:
+          path: /lists
+          method: get
+          cors: true
+          authorizer: auth
+
+  createList:
+    handler: src/functions/lists/createList.handler
+    events:
+      - http:
+          path: /lists
+          method: post
+          cors: true
+          authorizer: auth
+
+  getTasks:
+    handler: src/functions/tasks/getTasks.handler
+    events:
+      - http:
+          path: /lists/{listId}/tasks
+          method: get
+          cors: true
+          authorizer: auth
+
+  createTask:
+    handler: src/functions/tasks/createTask.handler
+    events:
+      - http:
+          path: /lists/{listId}/tasks
+          method: post
+          cors: true
+          authorizer: auth
+
+  updateTask:
+    handler: src/functions/tasks/updateTask.handler
+    events:
+      - http:
+          path: /tasks/{taskId}
+          method: patch
+          cors: true
+          authorizer: auth
+
+  deleteTask:
+    handler: src/functions/tasks/deleteTask.handler
+    events:
+      - http:
+          path: /tasks/{taskId}
+          method: delete
+          cors: true
+          authorizer: auth
+
+  auth:
+    handler: src/functions/auth/auth.handler
+
+custom:
+  serverless-offline:
+    httpPort: 4000 
