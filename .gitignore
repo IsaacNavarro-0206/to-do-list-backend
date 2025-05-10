@@ -3,11 +3,13 @@ node_modules/
 .pnp
 .pnp.js
 
-# Production build
+# Build
 dist/
 build/
+undefined/
+undefined/temp/
 
-# Environment variables
+# Environment
 .env
 .env.local
 .env.*.local
