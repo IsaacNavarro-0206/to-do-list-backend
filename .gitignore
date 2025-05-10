@@ -8,6 +8,8 @@ dist/
 build/
 undefined/
 undefined/temp/
+.aws/
+.serverless/
 
 # Environment
 .env
