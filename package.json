@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node --esm src/index.ts",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
     "start": "node dist/index.js",
     "watch": "tsc -w",
     "prisma:generate": "prisma generate",
@@ -22,7 +22,9 @@
     "mysql2": "^3.14.1"
   },
   "devDependencies": {
+    "@serverless/typescript": "^4.14.1",
     "@types/node": "^22.15.17",
+    "nodemon": "^3.1.10",
     "prisma": "^6.7.0",
     "serverless-offline": "^14.4.0",
     "ts-node": "^10.9.2",
