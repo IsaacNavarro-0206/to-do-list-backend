@@ -57,6 +57,24 @@ functions:
           cors: true
           authorizer: auth
 
+  updateList:
+    handler: src/functions/lists/updateList.handler
+    events:
+      - http:
+          path: /lists/{listId}
+          method: patch
+          cors: true
+          authorizer: auth
+
+  deleteList:
+    handler: src/functions/lists/deleteList.handler
+    events:
+      - http:
+          path: /lists/{listId}
+          method: delete
+          cors: true
+          authorizer: auth
+
   getTasks:
     handler: src/functions/tasks/getTasks.handler
     events:
