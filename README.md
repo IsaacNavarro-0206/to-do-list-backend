@@ -51,6 +51,8 @@ API backend para una aplicación de lista de tareas (To-Do List) usando Node.js,
 - `npm run build`: Compila el proyecto a JavaScript.
 - `npm start`: Ejecuta el servidor compilado.
 - `npx prisma studio`: Abre una interfaz visual para la base de datos.
+- `npx prisma generate`: Genera el cliente Prisma después de cambios en el esquema.
+- `npx prisma migrate dev --name nombre_migracion`: Crea y aplica una nueva migración de base de datos. Reemplaza `nombre_migracion` con un nombre descriptivo para tu migración.
 - `npx serverless offline start`: Ejecuta el servidor localmente simulando el entorno AWS Lambda.
 
 ## Notas
