@@ -60,7 +60,7 @@ export const handler = async (event: { body: string }) => {
         name: user.name
       },
       JWT_SECRET,
-      { expiresIn: '1h' }
+      { expiresIn: '1d' }
     );
 
     // Retornar el token

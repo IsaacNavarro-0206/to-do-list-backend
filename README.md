@@ -12,7 +12,7 @@ API backend para una aplicación de lista de tareas (To-Do List) usando Node.js,
 
 1. **Clona el repositorio:**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/IsaacNavarro-0206/to-do-list-backend.git
    cd to-do-list-backend
    ```
 
@@ -51,6 +51,7 @@ API backend para una aplicación de lista de tareas (To-Do List) usando Node.js,
 - `npm run build`: Compila el proyecto a JavaScript.
 - `npm start`: Ejecuta el servidor compilado.
 - `npx prisma studio`: Abre una interfaz visual para la base de datos.
+- `npx serverless offline start`: Ejecuta el servidor localmente simulando el entorno AWS Lambda.
 
 ## Notas
 - Asegúrate de que tu variable `JWT_SECRET` sea segura y no la compartas públicamente.
