@@ -3,10 +3,11 @@
 API backend para una aplicación de lista de tareas (To-Do List) usando Node.js, TypeScript, Prisma y JWT.
 
 ## Requisitos
-- Node.js >= 18
-- npm >= 9
-- Base de datos MySQL (puedes usar un servicio local o en la nube)
-- AWS CLI (opcional, solo si vas a desplegar en AWS)
+- Node.js >= 18 (se recomienda la última versión LTS)
+- npm >= 9 (generalmente se instala con Node.js)
+- Serverless Framework instalado globalmente: `npm install -g serverless` (si vas a desplegar o usar `serverless offline`)
+- Base de datos MySQL (puedes usar un servicio local o en la nube, por ejemplo, Docker, XAMPP, AWS RDS, etc.)
+- AWS CLI (opcional, solo si vas a desplegar en AWS manualmente o configurar perfiles)
 
 ## Instalación
 
